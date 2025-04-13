@@ -1,13 +1,13 @@
 import React from "react";
 import "./Navbar.css";
-import Logo from "../assets/logo.png";
+import logo from "../assets/Logo.png";
 import { FaSearch, FaHeart, FaShoppingBag, FaUser } from "react-icons/fa";
 
 const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-left">
-        <img src={Logo} alt="logo" className="logo-icon" />
+        <img src={logo} alt="logo" className="logo-icon" />
       </div>
 
       <span className="logo-text">LOGO</span>

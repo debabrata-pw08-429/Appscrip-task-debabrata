@@ -1,4 +1,3 @@
-import React from "react";
 import "./Navbar.css";
 import logo from "../assets/Logo.png";
 import { FaSearch, FaHeart, FaShoppingBag, FaUser } from "react-icons/fa";

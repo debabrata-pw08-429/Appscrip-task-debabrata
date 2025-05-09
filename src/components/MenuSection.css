@@ -28,3 +28,34 @@
 .menu a:hover {
   color: #007bff;
 }
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+    margin: 10px auto;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .menu.open {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menu ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+}

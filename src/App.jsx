@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import ProductList from "./components/ProductList";
 import Sidebar from "./components/Sidebar";
@@ -11,12 +11,19 @@ function App() {
   const [setSort] = useState("RECOMMENDED");
   const [showFilter, setShowFilter] = useState(true);
 
+  useEffect(() => {
+    const isMobile = window.innerWidth <= 768;
+    if (isMobile) {
+      setShowFilter(false);
+    }
+  }, []);
+
   const handleSortChange = (selected) => {
     setSort(selected);
   };
 
   const handleShowFilter = () => {
-    setShowFilter(!showFilter);
+    setShowFilter((prev) => !prev);
   };
 
   return (

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./MenuSection.css";
 
 const menuItems = [
@@ -18,14 +18,21 @@ function MenuItem({ href, label }) {
 }
 
 function Menu() {
+  const [open, setOpen] = useState(false);
+
   return (
-    <nav className="menu">
-      <ul>
-        {menuItems.map((item, index) => (
-          <MenuItem key={index} href={item.href} label={item.label} />
-        ))}
-      </ul>
-    </nav>
+    <>
+      <button className="hamburger" onClick={() => setOpen(!open)}>
+        ☰
+      </button>
+      <nav className={`menu ${open ? "open" : ""}`}>
+        <ul>
+          {menuItems.map((item, index) => (
+            <MenuItem key={index} href={item.href} label={item.label} />
+          ))}
+        </ul>
+      </nav>
+    </>
   );
 }
 

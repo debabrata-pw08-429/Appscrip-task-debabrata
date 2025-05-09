@@ -9,7 +9,6 @@
 }
 
 .footer-section > div {
-  flex: 1 1 300px;
   margin-bottom: 20px;
 }
 
@@ -25,7 +24,6 @@
   margin-bottom: 10px;
 }
 
-/* Newsletter Section */
 .newsletter-input {
   display: flex;
 }
